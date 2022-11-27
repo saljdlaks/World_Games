@@ -1,30 +1,60 @@
-from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User, auth
+
 # Create your views here.
 
-def home(request):
-   return render(request,'home.html')
 
-def signup(request):
+def login(request):
+    return render(request, "login.html")
 
 
-    if request.method == 'GET':
-        return render(request, 'signup.html',
-    {
-        'form': UserCreationForm
-    })
+def sign_up(request):
+    if request.method == "POST":
+        username = request.POST["username"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+
+        if User.objects.filter(username=username).exists():
+            messages.warning(request, "Nombre de usuario ya está en uso")
+            return redirect("/login?st=sign-up")
+        elif User.objects.filter(email=email).exists():
+            messages.warning(request, "Correo ya está en uso")
+            return redirect("/login?st=sign-up")
+        else:
+            try:
+                user = User.objects.create_user(
+                    username=username, password=password, email=email
+                )
+                user.save()
+                messages.success(request, "¡Usuario creado con éxito!")
+                return redirect("/")
+            except:
+                messages.warning(request, "Ingresa datos válidos por favor")
+                return redirect("/login?st=sign-up")
     else:
-        if request.POST['password1'] == request.POST['password1']:
-             try:
-                user = User.objects.create_user(usermame = request.POST['username'],
-                password = request.POST['password1'])
-                User.save()
-                return HttpResponse('User created successfully')
-             except:
-                return HttpResponse('Username alreday exists')
-        return HttpResponse('Password do not match')
-    
+        return render(request, "login.html")
 
-   
+
+def sign_in(request):
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            messages.success(request, f"¡Bienvenido {user}!")
+            return redirect("/")
+        else:
+            messages.warning(request, "Nombre de usuario o contraseña inválido")
+            return redirect("/login")
+    else:
+        return render(request, "login.html")
+
+
+def logout_user(request):
+    auth.logout(request)
+    messages.info(request, "Has cerrado sesión")
+    return redirect("/")

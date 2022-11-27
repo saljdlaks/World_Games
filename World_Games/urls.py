@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tasks import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name = 'home'),
-    path('signup/', views.signup, name = 'signup')
+    path('login/', views.login, name='login'),
+    path('sign_in', views.sign_in, name='sign_in'),
+    path('sign_up', views.sign_up, name='sign_up'),
+    path('logout_user', views.logout_user, name='logout_user'),
+    
 ]
