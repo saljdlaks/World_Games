@@ -3,26 +3,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login y Register</title>
-
-
 
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
-
-    <link rel="stylesheet" href="{% static 'css\estilos.css'%}">
-
-
+    <link rel="stylesheet" href="{% static 'css/estilos.css'%}" />
+    <link href="{% static 'css/alerts.css' %}" rel="stylesheet" />
 </head>
 
 <body>
-
     <main>
-
         <div class="contenedor__todo">
             <div class="caja__trasera">
                 <div class="caja__trasera-login">
@@ -40,29 +34,35 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form action="" class="formulario__login">
+
+                <form action="/sign_in" method="post" class="formulario__login">
+                    {% csrf_token %}
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Entrar</button>
+                    <input name="username" type="text" placeholder="Correo Electronico" required />
+                    <input name="password" type="password" placeholder="Contraseña" required />
+                    <button type="submit">Entrar</button>
                 </form>
 
                 <!--Register-->
-                <form action="" class="formulario__register">
+
+                <form action="/sign_up" method="post" class="formulario__register">
+                    {% csrf_token %}
                     <h2>Regístrarse</h2>
-                    <input type="text" placeholder="Nombre completo">
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Regístrarse</button>
+                    <input name="name" type="text" placeholder="Nombre completo" required />
+                    <input name="email" type="text" placeholder="Correo Electronico" required />
+                    <input name="username" type="text" placeholder="Usuario" required />
+                    <input name="password" type="password" placeholder="Contraseña" required />
+                    <button type="submit">Regístrarse</button>
                 </form>
             </div>
         </div>
-
     </main>
 
-    <script src="{% static 'js/script.js' %}"></script>
-
+    {% include 'alerts.html' %}
+    
+    <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+    <script src="{% static 'js/templatemo-script.js' %}"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

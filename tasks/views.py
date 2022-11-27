@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
+from .models import Profile
 
 # Create your views here.
 
@@ -11,6 +12,7 @@ def login(request):
 
 def sign_up(request):
     if request.method == "POST":
+        name = request.POST["name"]
         username = request.POST["username"]
         email = request.POST["email"]
         password = request.POST["password"]
@@ -26,7 +28,9 @@ def sign_up(request):
                 user = User.objects.create_user(
                     username=username, password=password, email=email
                 )
+                user_p = Profile.objects.create(name=name)
                 user.save()
+                user_p.save()
                 messages.success(request, "¡Usuario creado con éxito!")
                 return redirect("/")
             except:

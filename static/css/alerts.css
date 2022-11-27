@@ -1,0 +1,18 @@
+.swal-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+.swal-title {
+    color: white;
+}
+.swal-text {
+    color: white;
+}
+.swal-botton:not([disable]):hover {
+    color: white;
+}
+.swal-icon--success:before,
+.swal-icon--success:after,
+.swal-icon--success__hide-corners {
+    background: none !important;
+}
