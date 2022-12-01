@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA V </title>
+    <link rel="shortcut icon" href="static/Games_W/img/GTAV_logo.png" type="image/x-icon">
+    <link href="{% static 'Games_W\css\EstilosGTAV.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'Games_W\css\bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'Games_W\css\Menu.css' %}" rel='stylesheet' type='text/css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo">
+                            <a href="{% url 'tasks:World_gamer' %}"><img
+                                    src="static\Games_W\img\logo.png" alt="" /></a>
+                            <div class="menu">
+                                <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+                                <ul class="nav" id="nav">
+                                <li><a href="{% url 'tasks:GTA5' %}">GTA V</a></li>
+                                <li><a href="{% url 'tasks:PUBG' %}">PUBG</a></li>
+                                <li><a href="{% url 'tasks:Lol' %}">LOL</a></li>
+                                <li><a href="{% url 'tasks:Fornite' %}">Fortnite</a></li>
+                                <li><a href="{% url 'tasks:Dota' %}">Dota 2</a></li>
+                                <li><a href="{% url 'tasks:Minecraft' %}">Minecraft</a></li>
+                                <li><a href="{% url 'tasks:Roblox' %}">Roblox</a></li>
+                                <li><a href="{% url 'tasks:login' %}">cerrar sesion</a></li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="textos-header">
+            <h1>GTA V</h1>
+
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-1.35,30.09 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #000;"></path>
+            </svg></div>
+    </header>
+
+
+
+    <main>
+        <div class="content-bottom">
+            <div class="container">
+                <div class="row content_bottom-text">
+                    <div class="col-md-7">
+                        <h3>¿De que se trar?</h3>
+                        <p class="m_1">Es un juego de modo historia, mundo abieto que trata la histira de tres portognista, que tiene un pasado oculto
+                            ellos se volveran a encotrar para volver a hacer atracos , delitos y asesinatos juntos. Esta es una sega muy querida entre la comunidad,
+                            pero la implentacion del GTA online, fue un gran exito, solo que la historia iba sobre tu personaje, puedes realzar atracos,
+                            comprar coches, jates, aviones, edificios y muchas mas cosas, ademas de los distintos modo de juego que hay.
+                        </p>
+
+                        <h3>Fecha de lazamiento</h3>
+                        <p class="m_2"> salio el 17 de septiembre de 2013 crado por la comapañia de rockstargames, que tambien
+                            implementaron el mismo año el Online el 1 de octubre. Este juego sigue siendo juagado
+                            por el gran cariño que los usario le tiene al juego y por las actuliaciones de distintos modos
+                            de juego, tambien por la series de roleplay que fuero echas por los creadores de contenido, que tubiero una gran repercuino.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="contenido-texto">
+            <div class="contenedor">
+                <h2 class="titulo2">Requisitos recomendados para jugar.</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="static/Games_W/img/GTAV_logo.png" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>CPU: Intel Core i5 3470 a 3.2GHZ (4 CPUs) / AMD X8 FX-8350 a 4GHZ (8 CPUs).</h4>
+                            <h4>GPU: NVIDIA GTX 660 2GB / AMD HD7870 2GB</h4>
+                            <h4>RAM: 8GB de RAM</h4>
+                            <h4>HDD: 65GB libres de espacio disponible</h4>
+                            <h4>SO: 64-bit Windows 7, Windows 8.1, Windows 10</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Products</h4>
+                        <li><a href="#">Mens</a></li>
+                        <li><a href="#">Womens</a></li>
+                        <li><a href="#">Youth</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>About</h4>
+                        <li><a href="#">Careers and internships</a></li>
+                        <li><a href="#">Sponserships</a></li>
+                        <li><a href="#">team</a></li>
+                        <li><a href="#">Catalog Request/Download</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Customer Support</h4>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping and Order Tracking</a></li>
+                        <li><a href="#">Easy Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Replacement Binding Parts</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+
+                    <ul class="social">
+                        <li class="facebook"><a href="#"><span> </span></a></li>
+                        <li class="twitter"><a href="#"><span> </span></a></li>
+                        <li class="instagram"><a href="#"><span> </span></a></li>
+                        <li class="pinterest"><a href="#"><span> </span></a></li>
+                        <li class="youtube"><a href="#"><span> </span></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="row footer_bottom">
+                <div class="copy">
+                    <p>© 2022 proyecto fundamentos by <a>xxrairexx</a></p>
+                </div>
+
+
+            </div>
+        </div>
+</body>

@@ -1,0 +1,46 @@
+html {
+  font-family: 'open sans';
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+}
+
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-3 {
+  float: left;
+  width: 25%;
+
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+
+.row:after {
+  clear: both;
+}

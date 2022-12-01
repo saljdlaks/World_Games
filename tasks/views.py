@@ -5,9 +5,34 @@ from .models import Profile
 
 # Create your views here.
 
+def World_gamer(request):
+    return render(request, "World_gamer.html")
+
+def Dota(request):
+    return render(request, "Dota2.html")
+
+def Fornite(request):
+    return render(request, "Fornite.html")
+
+def GTAV(request):
+    return render(request, "GTAV.html")
+
+def Juego(request):
+    return render(request, "juego.html")
+
+def Minecraft(request):
+    return render(request, "Minecraft.html")
+
+def PUGB(request):
+    return render(request, "PUBG.html")
+    
+def Roblox(request):
+    return render(request, "Roblox.html")
+
 
 def login(request):
     return render(request, "login.html")
+
 
 
 def sign_up(request):
@@ -32,7 +57,7 @@ def sign_up(request):
                 user.save()
                 user_p.save()
                 messages.success(request, "¡Usuario creado con éxito!")
-                return redirect("/")
+                return redirect("")
             except:
                 messages.warning(request, "Ingresa datos válidos por favor")
                 return redirect("/login?st=sign-up")
@@ -50,7 +75,7 @@ def sign_in(request):
         if user is not None:
             auth.login(request, user)
             messages.success(request, f"¡Bienvenido {user}!")
-            return redirect("/")
+            return redirect("/Inicio")
         else:
             messages.warning(request, "Nombre de usuario o contraseña inválido")
             return redirect("/login")

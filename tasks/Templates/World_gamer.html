@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World_game</title>
+    <link rel="shortcut icon" href="img/icono.gif" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <link href="{% static 'Games_W\css\bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'Games_W\css\Menu.css' %}" rel='stylesheet' type='text/css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="tasks\Templates\World_gamer.html"><img src="static\Games_W\img\logo.png" alt="" /></a>
+                        <div class="menu">
+                            <a class="toggleMenu" href="#"><img src="static\Games_W\img\nav.png" alt="" /></a>
+                            <ul class="nav" id="nav">
+                                <li><a href="{% url 'tasks:GTA5' %}">GTA V</a></li>
+                                <li><a href="{% url 'tasks:PUBG' %}">PUBG</a></li>
+                                <li><a href="{% url 'tasks:Fornite' %}">Fortnite</a></li>
+                                <li><a href="{% url 'tasks:Dota' %}">Dota 2</a></li>
+                                <li><a href="{% url 'tasks:Minecraft' %}">Minecraft</a></li>
+                                <li><a href="{% url 'tasks:Roblox' %}">Roblox</a></li>
+                                <li><a href="{% url 'tasks:login' %}">cerrar sesion</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="textos-header">
+            <h1>Los 7 videojuegos mas jugados a lo largo de la historia</h1>
+            <h2>"Estos juegos sigue teniendo una alta actividad"</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-1.35,30.09 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">¿Por qué los elegimos?</h2>
+            <div class="contenedor-sobre-nostros">
+                <img src="static\images\control.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>¿Qué son estos juegos?</h3>
+                    <p>La razón de porque escogimos estos juegos, es principalmente por la grande popularidad y
+                        jugadores
+                        activos que tiene, a pesar del tiempo que llevan en el mercado, también son juegos populares
+                        en
+                        los streamer de las distintas plataformas. Estos juegos son de distintas categorías como en
+                        el
+                        caso de Minecraft y Roblox que son de aventura, en el caso PUBG
+                        (PlayerUnknown'sBattlegrounds) y
+                        Fornite que son de modalidad “battleroyale“, mientras tanto el GTA V (grand theft auto v) es
+                        un modo historia y
+                        con la misma base del juego hicieron el multijugador y por último el LOL (leagua of
+                        legends), Dota 2 que es de categoría moba.
+                    </p>
+                    <h3><span>2</span>¿Para que sirve esta información a los usuarios?</h3>
+                    <p>Esto le sirve para los jugadores que quieres conocer los juego mas populares de los
+                        videojuegos a lo largo de la historia, teniendo en cuenta
+                        los jugadores activos en el mes de septiembre, El cual fue 65 millones para Roblox, 60
+                        millones para Minecraft y 20 millones para LOL, lo que es
+                        un número sorpréndete, ya que estos juegos salieron mas de 10 años, superando a juegos
+                        reciente como el Fifa 23 que tiene una cifra de 46 millones.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Los videojuegos</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="static\images\GTAV.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="static\images\icono1.png" alt="">
+                            <nav1>
+                                <a href="html/GTAV.html" <p>GTA V</p>
+                                </a>
+                            </nav1>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="static\images\PUBG2.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="static\images\icono1.png" alt="">
+                            <nav1>
+                                <a href="html/PUBG.html" <p>PUBG</p>
+                                </a>
+                            </nav1>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="static\images\LOL.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="static\images\icono1.png" alt="">
+                            <nav1>
+                                <a href="html/LOL.html" <p>LOL </p>
+                                </a>
+                            </nav1>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="static\images\Fornite.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <nav1>
+                                <a href="html/Fornite.html" <p>Fortnite
+                                    </p>
+                                </a>
+                            </nav1>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="static\images\dota_2-3816694.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="static\images\icono1.png" alt="">
+                            <nav1>
+                                <a href="Dota2.html" <p>Dota 2
+                                    </p>
+                                </a>
+                            </nav1>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="static\images\Minecraft.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <nav1>
+                                <a href="html/Minecraft.html" <p>Minecraft
+                                    </p>
+                                </a>
+                            </nav1>
+
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="static\images\roblox.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="static\images\icono1.png" alt="">
+                            < <nav1>
+                                <a href="Roblox.html" <p>Roblox
+                                    </p>
+                                </a>
+                                </nav1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Products</h4>
+                        <li><a href="#">Mens</a></li>
+                        <li><a href="#">Womens</a></li>
+                        <li><a href="#">Youth</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>About</h4>
+                        <li><a href="#">Careers and internships</a></li>
+                        <li><a href="#">Sponserships</a></li>
+                        <li><a href="#">team</a></li>
+                        <li><a href="#">Catalog Request/Download</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Customer Support</h4>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping and Order Tracking</a></li>
+                        <li><a href="#">Easy Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Replacement Binding Parts</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+
+                    <ul class="social">
+                        <li class="facebook"><a href="#"><span> </span></a></li>
+                        <li class="twitter"><a href="#"><span> </span></a></li>
+                        <li class="instagram"><a href="#"><span> </span></a></li>
+                        <li class="pinterest"><a href="#"><span> </span></a></li>
+                        <li class="youtube"><a href="#"><span> </span></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="row footer_bottom">
+                <div class="copy">
+                    <p>© 2022 proyecto fundamentos by <a >xxrairexx</a></p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
